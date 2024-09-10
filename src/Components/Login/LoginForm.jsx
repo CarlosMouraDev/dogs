@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Input from "../Forms/Input";
 import Button from "../Forms/Button";
 import useForm from "../../Hooks/useForm";
-import Error from "../../InterfaceElements/Error";
+import Error from "../../Interface/Error";
 import { UserContext } from "../../Contexts/UserContext";
 import styles from "./LoginForm.module.css";
 import stylesBtn from "../Forms/Button.module.css";
