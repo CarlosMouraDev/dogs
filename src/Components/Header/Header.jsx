@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
-import Dog from "../Assets/dogpaw.svg?react";
-import { UserContext } from "../Contexts/UserContext";
+import Dog from "../../Assets/dogpaw.svg?react";
+import { UserContext } from "../../Contexts/UserContext";
 import { useContext } from "react";
 
 export default function Header() {
