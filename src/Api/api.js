@@ -6,7 +6,7 @@ export function TOKEN_POST(body) {
     options: {
       method: "POST",
       headers: {
-        "Content-type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(body),
     },
@@ -15,7 +15,7 @@ export function TOKEN_POST(body) {
 
 export function USER_GET(token) {
   return {
-    utl: API_URL + "/api/user",
+    url: API_URL + "/api/user",
     options: {
       method: "GET",
       headers: {
