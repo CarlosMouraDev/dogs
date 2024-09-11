@@ -1,16 +1,22 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import LoginForm from "./LoginForm";
 import LoginCreate from "./LoginCreate";
 import LoginPasswordLost from "./LoginPasswordLost";
 import LoginPasswordReset from "./LoginPasswordReset";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../Contexts/UserContext";
 import styles from "./Login.module.css";
 
 export default function Login() {
   const { login } = useContext(UserContext);
+  const navigate = useNavigate()
 
-  if (login === true) return <Navigate to="/conta" />;
+  useEffect(() => {
+    if (login === true) {
+      navigate('/conta');
+    }
+  }, [login, navigate]);
+
 
   return (
     <section className={styles.login}>
