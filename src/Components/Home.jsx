@@ -1,5 +1,7 @@
-export default function Home() {
-  return <div>
+import Feed from "./Feed/Feed";
 
-  </div>
+export default function Home() {
+  return <section className="container mainContainer">
+    <Feed/>
+  </section>
 }
