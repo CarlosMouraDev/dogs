@@ -6,7 +6,7 @@ import Error from "../../Interface/Error"
 import Loading from "../../Interface/Loading"
 import PhotoContent from "../Photo/PhotoContent"
 
-export default function FeedModal({photo}) {
+export default function FeedModal({photo, setModalPhoto}) {
   const { data, error, loading, req } = useFetch()
 
   useEffect(() => {
@@ -14,7 +14,14 @@ export default function FeedModal({photo}) {
     req(url, options)
   }, [photo, req])
 
-  return <div className={styles.modal}>
+  // Sai da tela que mostra a foto com detalhes ao clicar fora
+  function handleOutsideClick(event) {
+    if(event.target === event.currentTarget) {
+      setModalPhoto(null)
+    }
+  }
+
+  return <div className={styles.modal} onClick={handleOutsideClick}>
     {error && <Error error={error}/>}
     {loading && <Loading/>}
     {data && <PhotoContent data={data}/>}
