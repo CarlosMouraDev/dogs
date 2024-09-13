@@ -2,6 +2,7 @@
   overflow-y: auto;
   word-break: break-word;
   padding: 0 2rem;
+  height: 8rem;
 }
 
 .single.comments {
