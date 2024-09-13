@@ -8,13 +8,14 @@
 .login::before {
   display: block;
   content: '';
-  background: url('../../Assets/cachorro.jpg') no-repeat center center;
+  background: url('../../Assets/captura_de_tela_2021-08-27_as_11.01.15.webp') no-repeat center center;
   background-size: cover;
 }
 
 .forms {
   max-width: 30rem;
   padding: 1rem;
+  margin-top: 10vh;
 }
 
 @media (max-width: 40rem) {
