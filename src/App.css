@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Spectral&display=swap");
 
 * {
   box-sizing: border-box;
@@ -23,7 +23,8 @@ p {
   margin: 0px;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
   padding: 0px;
   margin: 0px;
@@ -39,7 +40,8 @@ a {
   color: #333;
 }
 
-button, input {
+button,
+input {
   display: block;
   font-size: 1rem;
   font-family: var(--type-first);
@@ -65,8 +67,8 @@ button, input {
   z-index: 1;
 }
 
-.title::after{
-  content: '';
+.title::after {
+  content: "";
   display: block;
   width: 1.5rem;
   height: 1.5rem;
@@ -89,4 +91,18 @@ button, input {
     opacity: 1;
     transform: initial;
   }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+}
+
+.AppBody {
+  flex: 1;
+}
+
+.VictoryContainer {
+  height: initial !important;
 }

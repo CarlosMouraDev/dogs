@@ -1,5 +1,11 @@
 import styles from "./Footer.module.css";
+import Pow from "../../Assets/dogpaw.svg?react"
 
 export default function Footer() {
-  return <div className={styles.footer}><h1>footer</h1></div>;
+  return (
+    <footer className={styles.footer}>
+      <Pow />
+      <p>Dogs. Alguns direitos reservados.</p>
+    </footer>
+  );
 }

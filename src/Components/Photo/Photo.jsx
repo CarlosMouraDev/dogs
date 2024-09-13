@@ -5,6 +5,7 @@ import { PHOTO_GET } from "../../Api/api";
 import Error from "../../Interface/Error";
 import Loading from "../../Interface/Loading";
 import PhotoContent from "./PhotoContent";
+import Head from "../../Interface/Head"
 
 export default function Photo() {
   const { id } = useParams();
@@ -19,6 +20,7 @@ export default function Photo() {
   if (data) {
     return (
       <section className="container mainContainer">
+        <Head title={data.photo.title} />
         <PhotoContent single={true} data={data} />
       </section>
     );
