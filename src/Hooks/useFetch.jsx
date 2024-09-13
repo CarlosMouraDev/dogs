@@ -6,24 +6,24 @@ export default function useFetch() {
   const [loading, setLoading] = useState(null);
 
   const req = useCallback(async (url, options) => {
-    let res
-    let json
+    let res;
+    let json;
     try {
-      setError(null)
-      setLoading(true)
-      res = await fetch(url, options)
-      json = await res.json()
-      if(res.ok === false) throw new Error(json.message)
+      setError(null);
+      setLoading(true);
+      res = await fetch(url, options);
+      json = await res.json();
+      if (res.ok === false) throw new Error(json.message);
     } catch (error) {
-      json = null
-      setError(error.message)
+      json = null;
+      setError(error.message);
     } finally {
-      setData(json)
-      setLoading(false)
+      setData(json);
+      setLoading(false);
 
-      return {res, json}
+      return { res, json };
     }
-  }, [])
+  }, []);
 
   return {
     data,

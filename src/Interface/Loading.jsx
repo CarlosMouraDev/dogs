@@ -7,12 +7,12 @@ export default function Loading() {
   useEffect(() => {
     function updateStep() {
       setStep((step) => {
-        if(step < 3) return step + 1;
-        else return 0
+        if (step < 3) return step + 1;
+        else return 0;
       });
     }
-    const interval = setInterval(updateStep, 300)
-    return () => clearInterval(interval)
+    const interval = setInterval(updateStep, 300);
+    return () => clearInterval(interval);
   }, []);
 
   function displayStep(i) {

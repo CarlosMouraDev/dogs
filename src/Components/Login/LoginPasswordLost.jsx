@@ -4,7 +4,7 @@ import useForm from "../../Hooks/useForm";
 import useFetch from "../../Hooks/useFetch";
 import { PASSWORD_LOST } from "../../Api/api";
 import Error from "../../Interface/Error";
-import Head from "../../Interface/Head"
+import Head from "../../Interface/Head";
 
 export default function LoginPasswordLost() {
   const login = useForm();
@@ -26,7 +26,7 @@ export default function LoginPasswordLost() {
       <Head title="Perdeu a senha" />
       <h1 className="title">Perdeu a senha?</h1>
       {data ? (
-        <p style={{color: "#4c1"}}>{data}</p>
+        <p style={{ color: "#4c1" }}>{data}</p>
       ) : (
         <form onSubmit={handleSubmit}>
           <Input label="Email / Usuário" type="text" name="login" {...login} />

@@ -29,7 +29,7 @@ export default function UserStatsGraphs({ data }) {
         <VictoryPie
           data={graph}
           innerRadius={50}
-          padding={{ top: 20, bottom: 20, left: 80, right: 80, fillOpacity: 0}}
+          padding={{ top: 20, bottom: 20, left: 80, right: 80, fillOpacity: 0 }}
           style={{
             data: {
               backdropFilter: 40,

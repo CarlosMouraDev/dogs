@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import Pow from "../../Assets/dogpaw.svg?react"
+import Pow from "../../Assets/dogpaw.svg?react";
 
 export default function Footer() {
   return (

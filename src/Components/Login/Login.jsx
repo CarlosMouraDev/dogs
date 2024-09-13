@@ -10,14 +10,13 @@ import NotFound from "../../Interface/NotFound";
 
 export default function Login() {
   const { login } = useContext(UserContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (login) {
-      navigate('/conta');
+      navigate("/conta");
     }
   }, [login, navigate]);
-
 
   return (
     <section className={styles.login}>

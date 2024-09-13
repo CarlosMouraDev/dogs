@@ -5,7 +5,7 @@ import { PHOTO_GET } from "../../Api/api";
 import Error from "../../Interface/Error";
 import Loading from "../../Interface/Loading";
 import PhotoContent from "./PhotoContent";
-import Head from "../../Interface/Head"
+import Head from "../../Interface/Head";
 
 export default function Photo() {
   const { id } = useParams();

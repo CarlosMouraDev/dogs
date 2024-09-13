@@ -4,18 +4,21 @@ import { UserContext } from "../../Contexts/UserContext";
 import PhotoCommentsForm from "./PhotoCommentsForm";
 
 export default function PhotoComments(props) {
-  const commentSection = useRef(null)
+  const commentSection = useRef(null);
   const [comments, setComments] = useState(() => props.comments);
   const { login } = useContext(UserContext);
 
   //Faz os comentários mais recentes serem exibidos primeiro
   useEffect(() => {
-    commentSection.current.scrollTop = commentSection.current.scrollHeight
-  }, [comments])
+    commentSection.current.scrollTop = commentSection.current.scrollHeight;
+  }, [comments]);
 
   return (
     <>
-      <ul ref={commentSection} className={`${styles.comments} ${props.single ? styles.single : ''}`}>
+      <ul
+        ref={commentSection}
+        className={`${styles.comments} ${props.single ? styles.single : ""}`}
+      >
         {comments.map((comment) => (
           <li key={comment.comment_ID}>
             <b>{comment.comment_author}: </b>
@@ -24,7 +27,13 @@ export default function PhotoComments(props) {
         ))}
       </ul>
       {/* O usuário só verá o input de comentar caso esteja logado */}
-      {login && <PhotoCommentsForm id={props.id} single={props.single} setComments={setComments}/>}
+      {login && (
+        <PhotoCommentsForm
+          id={props.id}
+          single={props.single}
+          setComments={setComments}
+        />
+      )}
     </>
   );
 }

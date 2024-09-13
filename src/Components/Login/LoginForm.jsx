@@ -7,7 +7,7 @@ import Error from "../../Interface/Error";
 import { UserContext } from "../../Contexts/UserContext";
 import styles from "./LoginForm.module.css";
 import stylesBtn from "../Forms/Button.module.css";
-import Head from "../../Interface/Head"
+import Head from "../../Interface/Head";
 
 export default function LoginForm() {
   const username = useForm();
@@ -35,7 +35,7 @@ export default function LoginForm() {
         ) : (
           <Button>Entrar</Button>
         )}
-        <Error error={error && 'Dados incorretos.'} />
+        <Error error={error && "Dados incorretos."} />
       </form>
       <Link className={styles.perdeu} to="/login/perdeu">
         Perdeu a senha?
@@ -43,7 +43,9 @@ export default function LoginForm() {
       <div className={styles.cadastro}>
         <h2 className={styles.subtitle}>Cadastre-se</h2>
         <p>Ainda não possui conta? Cadastre-se</p>
-        <Link className={stylesBtn.button} to="/login/criar">Cadastro</Link>
+        <Link className={stylesBtn.button} to="/login/criar">
+          Cadastro
+        </Link>
       </div>
     </section>
   );

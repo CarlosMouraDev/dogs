@@ -14,10 +14,10 @@ export default function UserHeaderNav() {
   const mobile = useMedia("(max-width: 40rem)");
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  const {pathname} = useLocation()
-  useEffect(()=> {
-    setMobileMenu(false)
-  }, [pathname])
+  const { pathname } = useLocation();
+  useEffect(() => {
+    setMobileMenu(false);
+  }, [pathname]);
 
   function handleLogout() {
     userLogout();
@@ -29,11 +29,17 @@ export default function UserHeaderNav() {
       {mobile && (
         <button
           aria-label="Menu"
-          className={`${styles.mobileButton} ${mobileMenu && styles.mobileButtonActive}`}
+          className={`${styles.mobileButton} ${
+            mobileMenu && styles.mobileButtonActive
+          }`}
           onClick={() => setMobileMenu(!mobileMenu)}
         ></button>
       )}
-      <nav className={`${mobile ? styles.navMobile : styles.nav} ${mobileMenu && styles.navMobileActive}`}>
+      <nav
+        className={`${mobile ? styles.navMobile : styles.nav} ${
+          mobileMenu && styles.navMobileActive
+        }`}
+      >
         <NavLink to="/conta" onClick={() => setMobileMenu(false)} end>
           <GaleriaSvg />
           {mobile && "Minhas fotos"}

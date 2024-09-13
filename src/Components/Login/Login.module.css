@@ -7,8 +7,9 @@
 
 .login::before {
   display: block;
-  content: '';
-  background: url('../../Assets/captura_de_tela_2021-08-27_as_11.01.15.webp') no-repeat center center;
+  content: "";
+  background: url("../../Assets/captura_de_tela_2021-08-27_as_11.01.15.webp")
+    no-repeat center center;
   background-size: cover;
 }
 

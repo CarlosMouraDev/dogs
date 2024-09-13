@@ -7,7 +7,7 @@ export default function useMedia(media) {
       const { matches } = window.matchMedia(media);
       setMatch(matches);
     }
-    changeMatch()
+    changeMatch();
     window.addEventListener("resize", changeMatch);
     return () => {
       window.removeEventListener("resize", changeMatch);

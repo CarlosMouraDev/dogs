@@ -7,22 +7,22 @@ const types = {
     message: "Preencha um email válido",
   },
   password: {
-    regex:
-      /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8})$/,
-    message: "A senha precisa conter pelo menos 8 caracteres, que contenham um número, um caractere maiusculo e um caractere minusculo",
+    regex: /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8})$/,
+    message:
+      "A senha precisa conter pelo menos 8 caracteres, que contenham um número, um caractere maiusculo e um caractere minusculo",
   },
   num: {
     regex: /^\d{1,3}$/,
-    message: 'Valor inválido'
+    message: "Valor inválido",
   },
   name: {
     regex: /^[A-Za-z]{1,10}$/,
-    message: 'O nome deve conter no máximo 10 letras e somente letras.'
+    message: "O nome deve conter no máximo 10 letras e somente letras.",
   },
   min: {
     regex: /^[A-Za-z]{8,}$/,
-    message: 'O nome deve conter no minimo 8 letras'
-  }
+    message: "O nome deve conter no minimo 8 letras",
+  },
 };
 
 export default function useForm(type) {
@@ -44,7 +44,7 @@ export default function useForm(type) {
   }
 
   function onChange({ target }) {
-    if(error)validate(target.value)
+    if (error) validate(target.value);
     setValue(target.value);
   }
   return {

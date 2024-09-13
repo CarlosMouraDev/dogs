@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function UserPost({handleSubmit}) {
+export default function UserPost({ handleSubmit }) {
   const [username, setUserame] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
