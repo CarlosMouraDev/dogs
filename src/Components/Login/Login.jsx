@@ -13,7 +13,7 @@ export default function Login() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (login === true) {
+    if (login) {
       navigate('/conta');
     }
   }, [login, navigate]);

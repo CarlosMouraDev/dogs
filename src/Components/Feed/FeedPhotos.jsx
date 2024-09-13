@@ -17,7 +17,6 @@ export default function FeedPhotos({page, user, setModalPhoto, setInfinite}) {
       if(res && res.ok && json.length < total) {
         setInfinite(false)
       }
-      console.log(json);
     }
     fetchPhotos();
   }, [req, user, page, setInfinite]);
