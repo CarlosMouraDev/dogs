@@ -1,3 +1,4 @@
+import Loading from "../Interface/Loading";
 import Feed from "./Feed/Feed";
 
 export default function Home() {

@@ -15,7 +15,7 @@ export default function PhotoComments(props) {
 
   return (
     <>
-      <ul ref={commentSection} className={styles.comments}>
+      <ul ref={commentSection} className={`${styles.comments} ${props.single ? styles.single : ''}`}>
         {comments.map((comment) => (
           <li key={comment.comment_ID}>
             <b>{comment.comment_author}: </b>
@@ -24,7 +24,7 @@ export default function PhotoComments(props) {
         ))}
       </ul>
       {/* O usuário só verá o input de comentar caso esteja logado */}
-      {login && <PhotoCommentsForm id={props.id} setComments={setComments}/>}
+      {login && <PhotoCommentsForm id={props.id} single={props.single} setComments={setComments}/>}
     </>
   );
 }

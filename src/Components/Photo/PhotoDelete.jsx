@@ -14,6 +14,7 @@ export default function PhotoDelete({ id }) {
     }
   }
 
+  // A foto só poderá ser deletada caso o user logado seja o dono do post
   return (
     <>
       {loading ? (

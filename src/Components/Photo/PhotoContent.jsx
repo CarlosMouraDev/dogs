@@ -4,15 +4,16 @@ import PhotoComments from "./PhotoComments";
 import { useContext } from "react";
 import { UserContext } from "../../Contexts/UserContext";
 import PhotoDelete from "./PhotoDelete";
+import Image from "../../Interface/Image";
 
-export default function PhotoContent({ data }) {
+export default function PhotoContent({ data, single }) {
   const { photo, comments } = data;
   const user = useContext(UserContext);
 
   return (
-    <div className={styles.photo}>
+    <div className={`${styles.photo} ${single ? styles.single : ''}`}>
       <div className={styles.img}>
-        <img src={photo.src} alt={photo.title} />
+        <Image src={photo.src} alt={photo.title}/>
       </div>
       <div className={styles.details}>
         <div>
@@ -25,7 +26,7 @@ export default function PhotoContent({ data }) {
             <span className={styles.views}>{photo.acessos}</span>
           </p>
           <h1 className="title">
-            <Link to={`/foto/${photo.id}`}>{photo.title}</Link>
+            <Link to={`/photo/${photo.id}`}>{photo.title}</Link>
           </h1>
           <ul className={styles.attributes}>
             <li>{photo.peso} KG</li>
@@ -35,7 +36,7 @@ export default function PhotoContent({ data }) {
           </ul>
         </div>
       </div>
-      <PhotoComments id={photo.id} comments={comments} />
+      <PhotoComments single={single} id={photo.id} comments={comments} />
     </div>
   );
 }

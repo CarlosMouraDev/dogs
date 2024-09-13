@@ -87,3 +87,17 @@
   background: #333;
   margin-top: 5px;
 }
+
+.single.photo {
+  grid-template-columns: 1fr;
+  height: auto;
+}
+.single img {
+  grid-row: 1;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+.single.details {
+  padding: 2rem 0xp 0px 0px;
+}
