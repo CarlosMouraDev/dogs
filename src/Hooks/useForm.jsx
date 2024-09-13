@@ -11,9 +11,17 @@ const types = {
       /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8})$/,
     message: "A senha precisa conter pelo menos 8 caracteres, que contenham um número, um caractere maiusculo e um caractere minusculo",
   },
-  number: {
-    regex: /^\d+$/,
-    message: 'Digite somente números'
+  num: {
+    regex: /^\d{1,3}$/,
+    message: 'Valor inválido'
+  },
+  name: {
+    regex: /^[A-Za-z]{1,10}$/,
+    message: 'O nome deve conter no máximo 10 letras e somente letras.'
+  },
+  min: {
+    regex: /^[A-Za-z]{8,}$/,
+    message: 'O nome deve conter no minimo 8 letras'
   }
 };
 

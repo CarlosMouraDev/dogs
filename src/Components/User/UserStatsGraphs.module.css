@@ -10,6 +10,7 @@
   border-radius: 0.2rem;
   display: grid;
   align-items: center;
+  background-color: white;
 }
 
 .total {

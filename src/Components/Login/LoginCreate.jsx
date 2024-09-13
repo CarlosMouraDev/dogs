@@ -9,7 +9,7 @@ import Error from "../../Interface/Error";
 import Head from "../../Interface/Head";
 
 export default function LoginCreate() {
-  const username = useForm();
+  const username = useForm("min");
   const email = useForm("email");
   const password = useForm();
 

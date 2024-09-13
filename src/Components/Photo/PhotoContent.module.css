@@ -3,7 +3,7 @@
   height: 36rem;
   border-radius: 0.2rem;
   display: grid;
-  background: white;
+  background: rgb(218, 218, 218);
   grid-template-columns: 36rem 20rem;
   grid-template-rows: auto 1fr auto;
   overflow: hidden;

@@ -4,7 +4,7 @@
 
 .perdeu {
   display: inline-block;
-  color: #665;
+  color: rgb(0, 0, 0);
   padding: 0.5rem 0;
   line-height: 1;
 }

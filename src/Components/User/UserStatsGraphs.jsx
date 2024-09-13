@@ -29,16 +29,17 @@ export default function UserStatsGraphs({ data }) {
         <VictoryPie
           data={graph}
           innerRadius={50}
-          padding={{ top: 20, bottom: 20, left: 80, right: 80 }}
+          padding={{ top: 20, bottom: 20, left: 80, right: 80, fillOpacity: 0}}
           style={{
             data: {
-              fillOpacity: 0.9,
-              stroke: "#fff",
+              backdropFilter: 40,
+              fillOpacity: 1,
+              stroke: "black",
               strokeWidth: 2,
             },
             labels: {
               fontSize: 14,
-              fill: "#333",
+              fill: "black",
             },
           }}
         />

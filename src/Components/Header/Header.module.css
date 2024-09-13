@@ -3,7 +3,7 @@
   position: fixed;
   width: 100%;
   z-index: 100;
-  background: white;
+  background: rgb(234, 234, 234);
   top: 0;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .login {
-  color: #333;
+  color: black;
 }
 
 .login::after {

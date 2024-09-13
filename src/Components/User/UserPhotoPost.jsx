@@ -10,9 +10,9 @@ import { useNavigate } from "react-router-dom";
 import Head from "../../Interface/Head";
 
 export default function UserPhotoPost() {
-  const nome = useForm();
-  const peso = useForm("number");
-  const idade = useForm("number");
+  const nome = useForm("Name");
+  const peso = useForm("num");
+  const idade = useForm("num");
   const [img, setImg] = useState({});
   const { data, error, loading, req } = useFetch();
   const navigate = useNavigate();

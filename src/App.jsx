@@ -13,7 +13,7 @@ import NotFound from "./Interface/NotFound";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App AppBG">
       <BrowserRouter>
         <UserStorage>
           <Header />
