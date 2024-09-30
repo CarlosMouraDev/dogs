@@ -3,3 +3,5 @@
 Simula uma rede social para cachorros. Representa bem o consumo de uma API com react e possui funcionalidades bem robustas.
 
 Link para o site: https://projeto-react-jade.vercel.app/
+
+Usuário padrão: user: dog / senha: dog
